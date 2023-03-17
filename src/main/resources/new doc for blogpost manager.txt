@@ -1,0 +1,35 @@
+GET all blog posts:
+
+GET http://localhost:8080/blog-posts/
+GET a specific blog post by ID:
+
+GET http://localhost:8080/blog-posts/{id}
+Replace {id} with the ID of the blog post you want to retrieve.
+
+POST a new blog post:
+
+POST http://localhost:8080/blog-posts/
+Content-Type: application/json
+
+{
+    "title": "My new blog post",
+    "content": "This is the content of my new blog post",
+    "publishedAt": "2023-03-17T14:30:00"
+}
+
+PUT (update) an existing blog post:
+
+PUT http://localhost:8080/blog-posts/{id}
+Content-Type: application/json
+
+{
+    "id": id,
+    "title": "Updated Blog Post Title",
+    "content": "Updated blog post content",
+    "publishedAt": "2023-03-17T15:00:00"
+}
+Replace {id} with the ID of the blog post you want to update.
+
+DELETE an existing blog post:
+
+DELETE http://localhost:8080/blog-posts/{id}
